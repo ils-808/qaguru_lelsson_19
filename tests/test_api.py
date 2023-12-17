@@ -13,7 +13,7 @@ def test_users_list_success():
     assert resp.status_code == 200
 
 def test_user_not_found():
-    resp = requests.get(f'{BASE_URL}users', params={23})
+    resp = requests.get(f'{BASE_URL}users/23')
 
     assert resp.status_code == 404
 
